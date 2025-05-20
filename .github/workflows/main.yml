@@ -5,7 +5,7 @@ on:
     - main
   workflow_dispatch: 
 jobs: 
-  firts_job:
+  first_job:
     name: primeiro job
     runs-on: ubuntu-22.04
     steps:
@@ -16,9 +16,11 @@ jobs:
       run: |
         echo "segunda ação"
 
-  segundo_job:
+  second_job:
     name: Instalação do ambiente NodeJS
     runs-on: ubuntu-22.04
+    needs: 
+    - first_job
     steps:
       - name: Verificação da versão do NodeJS
         run: |
