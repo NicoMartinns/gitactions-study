@@ -1,0 +1,17 @@
+name: pipeline-cicd
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch: 
+jobs: 
+  firts_job:
+    name: primeiro job
+    runs-on: ubuntu-22.04
+    steps:
+    - name: primeira ação
+      run: |
+        echo "primeira ação"
+    - name: segunda ação
+      run: |
+        echo "segunda ação"
