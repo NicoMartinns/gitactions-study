@@ -23,5 +23,13 @@ jobs:
       - name: Verificação da versão do NodeJS
         run: |
           node --version
+      - name: Atualização do NodeJS
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 20.13.1
+      - name: Conferindo versão NodeJS
+        run: |
+          node --version
+          
         
   
