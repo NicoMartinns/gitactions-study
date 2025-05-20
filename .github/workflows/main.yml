@@ -15,3 +15,13 @@ jobs:
     - name: segunda ação
       run: |
         echo "segunda ação"
+
+  segundo_job:
+    name: Instalação do ambiente NodeJS
+    runs-on: ubunut-22.04
+    steps:
+      - name: Verificação da versão do NodeJS
+        run: |
+          node --version
+        
+  
